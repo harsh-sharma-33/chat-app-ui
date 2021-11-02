@@ -52,6 +52,7 @@ main {
   /* background-color: rgba(0, 0, 0, 0.3); */
   width: 50%;
   height: 100%;
+  overflow-y: scroll;
 }
 
 .right {
@@ -197,6 +198,10 @@ main {
   color: #3c6df1;
 }
 
+.center-top-right > div > i {
+  color: #3c6df1;
+}
+
 .center-name-wrap {
   display: flex;
   align-items: flex-start;
@@ -233,6 +238,38 @@ main {
 .send-msg-block > i {
   margin-right: 10px;
 }
+
+input[type="checkbox"] {
+  position: relative;
+  width: 80px;
+  height: 20px;
+  -webkit-appearance: none;
+  background: #3c6df1;
+  outline: none;
+  border-radius: 20px;
+  transition: 0.4s;
+}
+input:checked[type="checkbox"] {
+  background: #fff;
+}
+
+input[type="checkbox"]::before {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  top: 0;
+  left: -5px;
+  background-color: #fff;
+  transition: 0.4s ease;
+  transform: scale(1.1);
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 01);
+}
+
+input:checked[type="checkbox"]::before {
+  left: 12px;
+}
 .msg-box-wrapper {
   display: flex;
   justify-content: center;
@@ -250,13 +287,12 @@ main {
   margin-right: 10px;
   /* margin-left: 10px; */
 }
-/* .msg-box-wrapper > input::placeholder { */
-/* margin-left: 20px; */
-/* } */
+
 .center-mid {
   /* position: relative; */
   position: absolute;
   bottom: 60px;
+  /* background-color: #fff; */
   width: 50%;
 }
 .msg {
@@ -272,7 +308,7 @@ main {
   background-color: rgb(8, 8, 145);
   left: 10px;
   border-bottom-left-radius: 5px;
-  bottom: 45px;
+  /* bottom: 45px; */
 }
 .msg.sender {
   background-color: rgb(240, 237, 237);
@@ -280,6 +316,10 @@ main {
   right: 10px;
   border-bottom-right-radius: 5px;
 }
+
+/* p.msg:last-of-type {
+  bottom: 0;
+} */
 .right-top {
   padding: 30px 0;
   display: flex;
@@ -389,4 +429,109 @@ main {
   height: 25px;
   background-color: rgba(0, 0, 0, 0.3);
   border-radius: 50%;
+}
+
+#close-btn {
+  display: none;
+}
+
+/* Responsive */
+@media only screen and (max-width: 480px) {
+  main {
+    display: block;
+    height: 90vh;
+    width: 95vw;
+    overflow-x: hidden;
+    background-color: transparent;
+  }
+
+  .left {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 30px;
+  }
+  .center {
+    width: 100%;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.3);
+  }
+
+  .right {
+    border-radius: 10px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    background-color: rgba(0, 0, 0, 01);
+    transition: 0.4s ease;
+    z-index: 2;
+    transform: translate(150vw, 100vh);
+  }
+
+  .right.open {
+    transform: translate(0, 94vh);
+  }
+
+  #close-btn {
+    display: block;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+
+  .icon-wrap {
+    width: 30%;
+  }
+  .chat-list-item {
+    justify-content: flex-start;
+  }
+  .chat-list-item-left {
+    margin-left: 10px;
+    margin-right: 15px;
+  }
+
+  .center {
+    position: relative;
+    border-radius: 10px;
+  }
+  .center-top {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .center-top-right {
+    width: 30%;
+  }
+  .center-bottom {
+    /* display: none; */
+    bottom: -95vh;
+    width: 100%;
+    left: 0;
+    justify-content: space-around;
+    transform: translateY(-8px);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+
+  .msg.sender {
+    right: -160px;
+  }
+  .send-msg-block {
+    margin-left: 5px;
+    width: 100%;
+    justify-content: space-around;
+    margin-left: 40px;
+  }
+  input[type="checkbox"] {
+    margin-right: 10px;
+  }
+  .send-msg-block > i {
+    margin-right: 3px;
+    width: 60%;
+  }
+  .msg-box-wrapper {
+    padding: 10px 0;
+    margin-right: 5px;
+  }
+  .msg-box-wrapper > input {
+    width: 200px;
+  }
 }

@@ -38,7 +38,7 @@
         </div>
         <div class="chat-list-wrap">
           <ul class="chat-list">
-            <li class="chat-list-item">
+            <li class="chat-list-item item-1">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -51,7 +51,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item item-2">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -64,7 +64,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item item-3">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -77,7 +77,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item item-4">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -90,7 +90,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item item-5">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -103,7 +103,7 @@
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
-            <li class="chat-list-item">
+            <li class="chat-list-item item-6">
               <div class="chat-list-item-left">
                 <img
                   src="https://picsum.photos/200"
@@ -113,6 +113,20 @@
               </div>
               <div class="chat-list-item-right">
                 <h4>Abhishek</h4>
+                <p>Lorem ipsum dolor sit amet.</p>
+              </div>
+            </li>
+
+            <li class="chat-list-item item-7">
+              <div class="chat-list-item-left">
+                <img
+                  src="https://picsum.photos/200"
+                  alt="user_profile"
+                  class="avatar"
+                />
+              </div>
+              <div class="chat-list-item-right">
+                <h4>Akash</h4>
                 <p>Lorem ipsum dolor sit amet.</p>
               </div>
             </li>
@@ -135,21 +149,24 @@
           <div class="center-top-right">
             <i class="fas fa-phone"></i>
             <i class="fas fa-video"></i>
-            <i class="fas fa-info-circle"></i>
+            <div id="info-btn">
+              <i class="fas fa-info-circle"></i>
+            </div>
           </div>
         </div>
         <div class="center-mid">
-          <p class="msg reciver">Hello</p>
-          <p class="msg sender">Hi!</p>
+          <!-- <p class="msg reciver">Hello</p> -->
+          <!-- <p class="msg sender">Hi!a</p> -->
         </div>
         <div class="center-bottom">
           <div class="send-msg-block">
-            <i class="fas fa-braille"></i>
+            <!-- <i class="fas fa-braille"></i>
             <i class="fas fa-camera"></i>
             <i class="fas fa-image"></i>
-            <i class="fas fa-microphone"></i>
+            <i class="fas fa-microphone"></i> -->
+            <input type="checkbox" id="radio-btn" />
             <div class="msg-box-wrapper">
-              <input type="text" />
+              <input type="text" id="msg" />
               <i class="fas fa-smile-beam"></i>
             </div>
             <i class="fas fa-thumbs-up"></i>
@@ -158,6 +175,9 @@
       </div>
       <div class="right">
         <div class="right-top">
+          <div id="close-btn">
+            <i class="fas fa-times"></i>
+          </div>
           <div class="img-wrap">
             <img
               src="https://picsum.photos/200"
@@ -248,5 +268,6 @@
       </div>
       <!-- https://picsum.photos/200 -->
     </main>
+    <script defer src="./script.js"></script>
   </body>
 </html>
