@@ -2,6 +2,8 @@ const infoBtn = document.getElementById("info-btn")
 const closeBtn = document.getElementById("close-btn")
 const rightSideBar = document.querySelector(".right")
 const chatList = document.querySelectorAll(".chat-list-item")
+const activeName = document.querySelector(".center-name-wrap>h2")
+const rightName = document.querySelector(".right-name")
 const textMessage = document.getElementById("msg")
 const msgArea = document.querySelector(".center-mid")
 const radioBtn = document.getElementById("radio-btn")
@@ -9,7 +11,7 @@ const radioBtn = document.getElementById("radio-btn")
 const messages = [
   {
     name: "Babe",
-    messages: [],
+    messages: ["s:Hello", "r:Hi"],
   },
 
   {
@@ -32,11 +34,17 @@ const messages = [
     name: "Abhishek",
     messages: ["s:Hello", "r:Hi"],
   },
+  {
+    name: "Akash",
+    messages: ["s:Hello", "r:Hi"],
+  },
 ]
 
 let currentActiveChat = null
 
 const showChat = (currentActiveChat) => {
+  activeName.innerHTML = currentActiveChat
+  rightName.innerHTML = currentActiveChat
   const chat = messages.filter((obj) => obj.name === currentActiveChat)
   while (msgArea.firstChild) {
     msgArea.removeChild(msgArea.firstChild)
